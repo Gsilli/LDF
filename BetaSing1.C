@@ -1,0 +1,216 @@
+{
+//=========Macro generated from canvas: canvasBetaSing/BetaSing
+//=========  (Wed Mar 18 16:18:46 2020) by ROOT version5.34/39
+   TCanvas *canvasBetaSing = new TCanvas("canvasBetaSing", "BetaSing",1020,344,900,700);
+   gStyle->SetOptStat(0);
+   canvasBetaSing->Range(0.95,-2.475,1.45,-1.725);
+   canvasBetaSing->SetFillColor(0);
+   canvasBetaSing->SetBorderMode(0);
+   canvasBetaSing->SetBorderSize(2);
+   canvasBetaSing->SetFrameBorderMode(0);
+   canvasBetaSing->SetFrameBorderMode(0);
+   
+   TProfile *BetaS1 = new TProfile("BetaS1","Profile",10,1,1.4,"");
+   BetaS1->SetBinEntries(1,1111);
+   BetaS1->SetBinEntries(2,1355);
+   BetaS1->SetBinEntries(3,883);
+   BetaS1->SetBinEntries(4,791);
+   BetaS1->SetBinEntries(5,962);
+   BetaS1->SetBinEntries(6,544);
+   BetaS1->SetBinEntries(7,19);
+   BetaS1->SetBinEntries(8,175);
+   BetaS1->SetBinEntries(9,262);
+   BetaS1->SetBinEntries(10,272);
+   BetaS1->SetBinEntries(11,94);
+   BetaS1->SetBinContent(1,-2492.457);
+   BetaS1->SetBinContent(2,-2998.239);
+   BetaS1->SetBinContent(3,-1936.598);
+   BetaS1->SetBinContent(4,-1720.332);
+   BetaS1->SetBinContent(5,-2044.886);
+   BetaS1->SetBinContent(6,-1142.844);
+   BetaS1->SetBinContent(7,-39.58101);
+   BetaS1->SetBinContent(8,-352.7737);
+   BetaS1->SetBinContent(9,-524.7426);
+   BetaS1->SetBinContent(10,-532.6798);
+   BetaS1->SetBinContent(11,-175.2467);
+   BetaS1->SetBinError(1,75.35039);
+   BetaS1->SetBinError(2,82.08387);
+   BetaS1->SetBinError(3,65.67859);
+   BetaS1->SetBinError(4,61.61508);
+   BetaS1->SetBinError(5,66.55916);
+   BetaS1->SetBinError(6,49.50203);
+   BetaS1->SetBinError(7,9.153461);
+   BetaS1->SetBinError(8,26.91807);
+   BetaS1->SetBinError(9,32.71476);
+   BetaS1->SetBinError(10,32.61089);
+   BetaS1->SetBinError(11,18.27912);
+   BetaS1->SetMinimum(-2.4);
+   BetaS1->SetMaximum(-1.8);
+   BetaS1->SetEntries(6468);
+   BetaS1->SetStats(0);
+   
+   TF1 *fpol1 = new TF1("fpol1","pol1",1,1.4);
+   fpol1->SetFillColor(19);
+   fpol1->SetFillStyle(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#cc3333");
+   fpol1->SetLineColor(ci);
+   fpol1->SetLineWidth(2);
+   fpol1->SetChisquare(6.810739);
+   fpol1->SetNDF(8);
+   fpol1->GetXaxis()->SetLabelFont(42);
+   fpol1->GetXaxis()->SetLabelSize(0.035);
+   fpol1->GetXaxis()->SetTitleSize(0.035);
+   fpol1->GetXaxis()->SetTitleFont(42);
+   fpol1->GetYaxis()->SetLabelFont(42);
+   fpol1->GetYaxis()->SetLabelSize(0.035);
+   fpol1->GetYaxis()->SetTitleSize(0.035);
+   fpol1->GetYaxis()->SetTitleFont(42);
+   fpol1->SetParameter(0,-3.034426);
+   fpol1->SetParError(0,0.0400622);
+   fpol1->SetParLimits(0,0,0);
+   fpol1->SetParameter(1,0.7694859);
+   fpol1->SetParError(1,0.03527451);
+   fpol1->SetParLimits(1,0,0);
+   BetaS1->GetListOfFunctions()->Add(fpol1);
+   
+   TF1 *fpol2 = new TF1("fpol2","pol2",1,1.4);
+   fpol2->SetFillColor(19);
+   fpol2->SetFillStyle(0);
+
+   ci = TColor::GetColor("#3333cc");
+   fpol2->SetLineColor(ci);
+   fpol2->SetLineWidth(2);
+   fpol2->SetChisquare(3.60298);
+   fpol2->SetNDF(7);
+   fpol2->GetXaxis()->SetLabelFont(42);
+   fpol2->GetXaxis()->SetLabelSize(0.035);
+   fpol2->GetXaxis()->SetTitleSize(0.035);
+   fpol2->GetXaxis()->SetTitleFont(42);
+   fpol2->GetYaxis()->SetLabelFont(42);
+   fpol2->GetYaxis()->SetLabelSize(0.035);
+   fpol2->GetYaxis()->SetTitleSize(0.035);
+   fpol2->GetYaxis()->SetTitleFont(42);
+   fpol2->SetParameter(0,-2.257703);
+   fpol2->SetParError(0,0.435522);
+   fpol2->SetParLimits(0,0,0);
+   fpol2->SetParameter(1,-0.5582508);
+   fpol2->SetParError(1,0.7421679);
+   fpol2->SetParLimits(1,0,0);
+   fpol2->SetParameter(2,0.5624491);
+   fpol2->SetParError(2,0.3140381);
+   fpol2->SetParLimits(2,0,0);
+   BetaS1->GetListOfFunctions()->Add(fpol2);
+
+   ci = TColor::GetColor("#666666");
+   BetaS1->SetLineColor(ci);
+
+   ci = TColor::GetColor("#666666");
+   BetaS1->SetMarkerColor(ci);
+   BetaS1->SetMarkerStyle(8);
+   BetaS1->GetXaxis()->SetTitle("sec(#theta) / #circ");
+   BetaS1->GetXaxis()->SetRange(1,10);
+   BetaS1->GetXaxis()->CenterTitle(true);
+   BetaS1->GetXaxis()->SetNdivisions(10);
+   BetaS1->GetXaxis()->SetLabelFont(42);
+   BetaS1->GetXaxis()->SetLabelSize(0.031);
+   BetaS1->GetXaxis()->SetTitleSize(0.035);
+   BetaS1->GetXaxis()->SetTickLength(0.02);
+   BetaS1->GetXaxis()->SetTitleOffset(1.3);
+   BetaS1->GetXaxis()->SetTitleFont(42);
+   BetaS1->GetYaxis()->SetTitle("#beta ");
+   BetaS1->GetYaxis()->CenterTitle(true);
+   BetaS1->GetYaxis()->SetNdivisions(10);
+   BetaS1->GetYaxis()->SetLabelFont(42);
+   BetaS1->GetYaxis()->SetLabelSize(0.031);
+   BetaS1->GetYaxis()->SetTitleSize(0.035);
+   BetaS1->GetYaxis()->SetTickLength(0.02);
+   BetaS1->GetYaxis()->SetTitleOffset(1.3);
+   BetaS1->GetYaxis()->SetTitleFont(42);
+   BetaS1->GetZaxis()->SetLabelFont(42);
+   BetaS1->GetZaxis()->SetLabelSize(0.035);
+   BetaS1->GetZaxis()->SetTitleSize(0.035);
+   BetaS1->GetZaxis()->SetTitleFont(42);
+   BetaS1->Draw("");
+   
+   TPaveStats *ptstats = new TPaveStats(0.1436526,0.7715134,0.4131403,0.8649852,"brNDC");
+   ptstats->SetName("stats");
+   ptstats->SetBorderSize(1);
+   ptstats->SetFillColor(0);
+   ptstats->SetFillStyle(0);
+   ptstats->SetTextAlign(12);
+   ptstats->SetTextFont(42);
+   TText *text = ptstats->AddText("#chi^{2} / ndf =6.81074 / 8");
+   text = ptstats->AddText(" par0=-3.03443 ");
+   text = ptstats->AddText(" par1=0.769486 ");
+   ptstats->SetOptStat(0);
+   ptstats->SetOptFit(111);
+   ptstats->Draw();
+   
+   ptstats = new TPaveStats(0.1436526,0.611276,0.4131403,0.7373887,"brNDC");
+   ptstats->SetName("stats");
+   ptstats->SetBorderSize(1);
+   ptstats->SetFillColor(0);
+   ptstats->SetFillStyle(0);
+   ptstats->SetTextAlign(12);
+   ptstats->SetTextFont(42);
+   text = ptstats->AddText("#chi^{2} / ndf =3.60298 / 7 ");
+   text = ptstats->AddText(" par0=-2.2577 ");
+   text = ptstats->AddText(" par1=-0.558251 ");
+   text = ptstats->AddText(" par2=0.562449 ");
+   ptstats->SetOptStat(0);
+   ptstats->SetOptFit(111);
+   ptstats->Draw();
+   
+   TPaveText *pt = new TPaveText(0.4298664,0.94,0.5701336,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   pt->Draw();
+   
+   TLegend *leg = new TLegend(0.5907572,0.7210682,0.8435412,0.8753709,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(0);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("BetaS1","1.0#leq log_{10}S250/VEM<1.2","p");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+
+   ci = TColor::GetColor("#666666");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(8);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("fpol1"," pol1 ","l");
+
+   ci = TColor::GetColor("#cc3333");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("fpol2"," pol2 ","l");
+
+   ci = TColor::GetColor("#3333cc");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   canvasBetaSing->Modified();
+   canvasBetaSing->cd();
+   canvasBetaSing->SetSelected(canvasBetaSing);
+}
